@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form and Contract List</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .contact-form {
+        margin-bottom: 30px;
+      }
+
+      .contact-form input[type="text"],
+      .contact-form input[type="email"],
+      .contact-form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      .contact-form input[type="submit"] {
+        background-color: #007bff;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        border-radius: 4px;
+        padding: 10px 30px;
+        transition: background-color 0.3s;
+      }
+
+      .contact-form input[type="submit"]:hover {
+        background-color: #0056b3;
+      }
+
+      .contract-list {
+        list-style: none;
+        padding: 0;
+      }
+
+      .contract-list li {
+        background-color: #f9f9f9;
+        border-radius: 4px;
+        padding: 15px;
+        margin-bottom: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .contract-list li h3 {
+        margin: 0;
+      }
+
+      .contract-list li .btns button {
+        background-color: #007bff;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        border-radius: 4px;
+        padding: 8px 15px;
+        margin-left: 5px;
+        transition: background-color 0.3s;
+      }
+
+      .contract-list li .btns button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Contact Form</h2>
+      <form class="contact-form">
+        <input
+          type="text"
+          name="name"
+          placeholder="Your Name"
+          required
+          id="nameInput"
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Your Email"
+          required
+          id="emailInput"
+        />
+        <input type="submit" value="Submit" id="submit-btn" />
+      </form>
+
+      <h2>Contract List</h2>
+      <ul class="contract-list" id="list"></ul>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
