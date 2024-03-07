@@ -25,7 +25,7 @@ function addContact(info) {
    <h3 id="emailDisplay">${info.email}</h3>
  </div>
  <div class="btns">
-   <button>Edit</button>
+   <button onClick=editItem(this)>Edit</button>
    <button onClick=deleteItem(this)>Delete</button>
  </div>`;
 
@@ -36,5 +36,14 @@ function deleteItem(tag) {
   tag.parentElement.parentElement.remove();
 }
 function editItem(tag) {
-  console.log(tag);
+  let editAbleItem = tag.parentElement.parentElement;
+
+  let currentName = editAbleItem.querySelector("#nameDisplay").innerText;
+  let currentEmail = editAbleItem.querySelector("#emailDisplay").innerText;
+
+  let newName = prompt("Enter new name: ", currentName);
+  let newEmail = prompt("Enter new email:", currentEmail);
+
+  editAbleItem.querySelector("#nameDisplay").innerText = newName;
+  editAbleItem.querySelector("#emailDisplay").innerText = newEmail;
 }
