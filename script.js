@@ -26,8 +26,15 @@ function addContact(info) {
  </div>
  <div class="btns">
    <button>Edit</button>
-   <button>Delete</button>
+   <button onClick=deleteItem(this)>Delete</button>
  </div>`;
 
   list.appendChild(li);
+}
+
+function deleteItem(tag) {
+  tag.parentElement.parentElement.remove();
+}
+function editItem(tag) {
+  console.log(tag);
 }
