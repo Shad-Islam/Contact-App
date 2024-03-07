@@ -15,6 +15,8 @@ submitBtn.addEventListener("click", function (event) {
   console.log("Email:", information.email);
 
   addContact(information);
+  nameInput.value = "";
+  emailInput.value = "";
 });
 
 function addContact(info) {
@@ -35,6 +37,7 @@ function addContact(info) {
 function deleteItem(tag) {
   tag.parentElement.parentElement.remove();
 }
+
 function editItem(tag) {
   let editAbleItem = tag.parentElement.parentElement;
 
